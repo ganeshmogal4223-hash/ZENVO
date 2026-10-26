@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="ZENVO — Discover premium fashion and everyday essentials.">
+<title>ZENVO | Wear Your Edge</title>
+
+<style>
+:root {
+  --black: #080808;
+  --gold: #d4af65;
+  --white: #f7f4ed;
+  --muted: #aaa49a;
+  --panel: #141414;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+}
+a { color: inherit; text-decoration: none; }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(8,8,8,.96);
+  border-bottom: 1px solid #302719;
+  padding: 17px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 27px;
+  letter-spacing: 5px;
+  font-weight: 800;
+  color: var(--gold);
+}
+nav { display: flex; gap: 20px; align-items: center; }
+nav a { font-size: 12px; letter-spacing: 1px; }
+nav a:hover { color: var(--gold); }
+
+.hero {
+  min-height: 76vh;
+  display: flex;
+  align-items: center;
+  padding: 75px 8%;
+  background:
+    radial-gradient(ellipse at 85% 45%, #4a3820 0%, #20180f 23%, #080808 67%);
+}
+.hero-content { max-width: 650px; }
+.eyebrow {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 12px;
+}
+h1 {
+  font-size: clamp(49px, 9vw, 94px);
+  letter-spacing: -3px;
+  line-height: .98;
+  margin: 22px 0;
+}
+h1 span { color: var(--gold); }
+.hero p {
+  color: #c4bfb5;
+  max-width: 470px;
+  line-height: 1.8;
+}
+.btn {
+  display: inline-block;
+  background: var(--gold);
+  color: #080808;
+  padding: 15px 22px;
+  margin-top: 19px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: 1px solid var(--gold);
+  cursor: pointer;
+}
+.btn:hover { background: transparent; color: var(--gold); }
+
+section { padding: 68px 7%; }
+.section-head { text-align: center; margin-bottom: 34px; }
+.section-head h2 { font-size: 30px; letter-spacing: 2px; }
+.section-head p { color: var(--muted); line-height: 1.7; }
+
+.categories, .products {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 18px;
+}
+.category {
+  min-height: 240px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(140deg,#34291b,#17130e 55%,#101010);
+  border: 1px solid #493820;
+}
+.category h3 { font-size: 27px; margin: 0 0 8px; }
+.category p { color: #c4bdb2; margin: 0; }
+
+#shop { background: #0c0c0c; }
+.products { grid-template-columns: repeat(3,minmax(0,1fr)); }
+.product {
+  background: var(--panel);
+  border: 1px solid #302719;
+  padding: 13px;
+}
+.product-art {
+  height: 190px;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(ellipse,#302719,#101010 70%);
+  color: var(--gold);
+  font-size: 46px;
+  letter-spacing: 5px;
+}
+.product h3 { font-size: 15px; line-height: 1.5; }
+.price { color: var(--gold); font-size: 17px; font-weight: bold; }
+.product .btn {
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 12px 5px;
+}
+.note { font-size: 11px; color: #999; line-height: 1.6; }
+
+.about {
+  text-align: center;
+  background: #12100d;
+  border-top: 1px solid #302719;
+  border-bottom: 1px solid #302719;
+}
+.about p {
+  max-width: 650px;
+  margin: auto;
+  color: #bbb4a8;
+  line-height: 1.9;
+}
+.contact { text-align: center; }
+footer {
+  border-top: 1px solid #302719;
+  text-align: center;
+  padding: 28px 15px;
+  color: #999;
+  font-size: 12px;
+}
+footer strong { color: var(--gold); letter-spacing: 4px; }
+
+@media(max-width:650px) {
+  header { padding: 15px 4%; }
+  .logo { font-size: 21px; letter-spacing: 3px; }
+  nav { gap: 10px; }
+  nav a { font-size: 10px; letter-spacing: 0; }
+  .hero { min-height: 65vh; padding: 55px 7%; }
+  h1 { letter-spacing: -2px; }
+  section { padding: 48px 5%; }
+  .categories { grid-template-columns: 1fr; }
+  .products { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
+  .product { padding: 9px; }
+  .product-art { height: 145px; font-size: 34px; }
+  .section-head h2 { font-size: 24px; }
+}
+@media(max-width:360px) {
+  nav { gap: 7px; }
+  nav a { font-size: 9px; }
+  .products { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <a class="logo" href="#">ZENVO</a>
+  <nav>
+    <a href="#collections">COLLECTIONS</a>
+    <a href="#shop">SHOP</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <div class="eyebrow">The new era of everyday fashion</div>
+      <h1>WEAR YOUR<br><span>EDGE.</span></h1>
+      <p>
+        Modern essentials. Timeless confidence.
+        Discover your style with ZENVO — fashion
+        made for your everyday statement.
+      </p>
+      <a class="btn" href="#shop">EXPLORE COLLECTION</a>
+    </div>
+  </section>
+
+  <section id="collections">
+    <div class="section-head">
+      <div class="eyebrow">Find your style</div>
+      <h2>THE COLLECTIONS</h2>
+      <p>Designed for your own kind of confidence.</p>
+    </div>
+    <div class="categories">
+      <div class="category">
+        <h3>MEN'S EDIT</h3>
+        <p>Clean essentials. Effortless style.</p>
+        <a class="btn" href="#shop">SHOP MEN</a>
+      </div>
+      <div class="category">
+        <h3>WOMEN'S EDIT</h3>
+        <p>Modern looks. Your own rules.</p>
+        <a class="btn" href="#shop">SHOP WOMEN</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="shop">
+    <div class="section-head">
+      <div class="eyebrow">Curated for you</div>
+      <h2>FEATURED PRODUCTS</h2>
+      <p>Explore the ZENVO edit.</p>
+    </div>
+
+    <div class="products">
+      <article class="product">
+        <div class="product-art">Z.</div>
+        <h3>Essential Black T-Shirt</h3>
+        <div class="price">₹599</div>
+        <p class="note">Sample listing — confirm price and stock.</p>
+        <a class="btn" href="https://wa.me/919999999999?text=Hi%20ZENVO%2C%20I%20want%20to%20order%20Essential%20Black%20T-Shirt" target="_blank" rel="noopener">ORDER ON WHATSAPP</a>
+      </article>
+
+      <article class="product">
+        <div class="product-art">Z.</div>
+        <h3>Oversized Everyday T-Shirt</h3>
+        <div class="price">₹799</div>
+        <p class="note">Sample listing — confirm price and stock.</p>
+        <a class="btn" href="https://wa.me/919999999999?text=Hi%20ZENVO%2C%20I%20want%20to%20order%20Oversized%20Everyday%20T-Shirt" target="_blank" rel="noopener">ORDER ON WHATSAPP</a>
+      </article>
+
+      <article class="product">
+        <div class="product-art">Z.</div>
+        <h3>Classic Street Hoodie</h3>
+        <div class="price">₹1,499</div>
+        <p class="note">Sample listing — confirm price and stock.</p>
+        <a class="btn" href="https://wa.me/919999999999?text=Hi%20ZENVO%2C%20I%20want%20to%20order%20Classic%20Street%20Hoodie" target="_blank" rel="noopener">ORDER ON WHATSAPP</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="eyebrow">The ZENVO point of view</div>
+    <h2>LESS NOISE. MORE YOU.</h2>
+    <p>
+      ZENVO is about confident style, modern essentials
+      and the freedom to make every look your own.
+      Find your fit. Define your edge.
+    </p>
+    <a class="btn" href="#shop">DISCOVER YOUR STYLE</a>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="eyebrow">Let's connect</div>
+    <h2>HAVE A QUESTION?</h2>
+    <p style="color:#aaa;line-height:1.8">
+      Need help with products or an order?
+      Message the ZENVO team on WhatsApp.
+    </p>
+    <a class="btn" href="https://wa.me/919999999999?text=Hi%20ZENVO%2C%20I%20have%20a%20question" target="_blank" rel="noopener">CHAT WITH US</a>
+  </section>
+</main>
+
+<footer>
+  <strong>ZENVO</strong>
+  <p>Wear Your Edge.</p>
+  <p>© <span id="year"></span> ZENVO. All rights reserved.</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
